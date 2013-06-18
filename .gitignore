@@ -1,3 +1,4 @@
 .fhclocal
 fhc-debug.log
 .DS_Store
+node_modules
