@@ -6,7 +6,7 @@ $(document).ready(function(){
 	if(g_debug){
 		log('App Initializing...');
 	}
-
+    // fsm = storageFsm();
 	uiInit();
 	initOriHandler(); // setup orientation handler if needed
 	overRide(); // run iOS or Android overrides
