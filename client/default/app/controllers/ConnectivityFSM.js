@@ -11,6 +11,10 @@ var initConFSM = function() {
            $('#content').removeClass( data.fromState ).addClass( data.toState );
            log("We're",data.toState);
     });
+    // And later, when you need it:
+    ajaxManager = new ActManagementFsm({
+        httpConnectivityFsm: httpConnectivity
+    });
 };
 
 
@@ -63,6 +67,8 @@ var HttpConnectivityFsm = machina.Fsm.extend({
             self.handle( "device.resume" );
         });
     },
+
+
 
     states : {
         probing : {
