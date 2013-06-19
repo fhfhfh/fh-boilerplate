@@ -11,7 +11,7 @@ var initConFSM = function() {
            $('#content').removeClass( data.fromState ).addClass( data.toState );
            log("We're",data.toState);
     });
-    // And later, when you need it:
+
     ajaxManager = new ActManagementFsm({
         httpConnectivityFsm: httpConnectivity
     });

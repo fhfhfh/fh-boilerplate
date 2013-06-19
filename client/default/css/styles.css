@@ -458,3 +458,10 @@ li {
  *
  *  Or create an aliase to save you remembering that line!
  */
+
+.offline h1 {
+    color: red;
+}
+.online h1 {
+    color: green;
+}

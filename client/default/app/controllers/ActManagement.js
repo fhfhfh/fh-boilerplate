@@ -2,16 +2,15 @@
 var sendAction = function(act, options, successFn, failFn) {
     Act.call(act, options,
         function(res){
-            console.log("Success",res);
-            successFn(res);
+            log(act,"called, with params",options);
         }, function(msg, err){
-             failFn(msg, err);
+            log(act,"failed, with params",options);
         }
     );
 };
 
 var ActManagementFsm = machina.Fsm.extend({
-    
+
     initialize: function() {
         var self = this;
         // we cause this FSM to transition based on the
