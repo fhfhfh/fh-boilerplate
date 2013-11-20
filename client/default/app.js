@@ -25,6 +25,7 @@ function uiInit(pagesArray){
 
 	// TODO: move this to Login View file
 	$('#start').unbind().bind('click', function(){
+		alert ("go");
 		var link = "https://www.google.ie";
              $fh.webview({
               'act': 'open',
@@ -39,16 +40,46 @@ function uiInit(pagesArray){
             }, function(res) {
               if (res === "opened") {
                 //webview window is now open
-                console.log("webview opened");
+                alert("webview opened");
               }
               if (res === "closed") {
                 //webview window is now closed
-                console.log("webview closed");
+                alert("webview closed");
               }
             }, function(msg, err) {
-              console.log('error from webview ',msg,err);
+              alert('error from webview ',msg,err);
             });
 	});
+
+
+	// var htmlLink,
+	// localLink = ValueRetail.app.getController('Downloader').convertRemoteUrlToLocalPath(opts.link);
+	// ValueRetail.app.getController('Stats').incrementStats(opts.link);
+	// if (opts.linktype == 'image') {
+	//   htmlLink = '<img width="100%" src="' + localLink + '" />';
+	// } else {
+	//   htmlLink = '<embed type="application/pdf" width="100%" height="100%" src="' + localLink + '" />';
+	//   console.log('opts.link', opts.link);
+	//   if (location.hostname != '127.0.0.1') {
+	//     $fh.webview({
+	//       'act': 'open',
+	//       'url': localLink,
+	//       'showControls': false,
+	//       'title': ''
+	//     }, function(res) {
+	//       if (res === "opened") {
+	//         //webview window is now open
+	//       }
+	//       if (res === "closed") {
+	//         //webview window is now closed
+	//       }
+	//     }, function(msg, err) {
+	//       console.log(msg);
+	//     });
+	//     break;
+	//   }
+	// }
+
 
 	//TODO: Decide on best practice for init UI, without prescribing
 	// any single UI framework
