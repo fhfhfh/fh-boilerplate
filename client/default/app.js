@@ -31,20 +31,22 @@ function uiInit(pagesArray){
               'act': 'open',
               'url': link,
               'title': 'Addleshaw Goddard',
-              'x': '20px',
-              'y': '20px',
-              'width': '900px',
-              'height': '700px',
+              // 'x': '20px',
+              // 'y': '20px',
+              // 'width': '900px',
+              // 'height': '700px',
               'showTitleBar': 'true',
               'showTitleControls': 'true'
             }, function(res) {
               if (res === "opened") {
                 //webview window is now open
                 alert("webview opened");
+                console.log("webview opened");
               }
               if (res === "closed") {
                 //webview window is now closed
                 alert("webview closed");
+                console.log("webview closed");
               }
             }, function(msg, err) {
               alert('error from webview ',msg,err);
